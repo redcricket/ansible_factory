@@ -125,24 +125,10 @@ class ZCServiceBuilder:
             self._instance = ZCService(config={"instance_seq": "0"})
         return self._instance
 
-class LocalService:
-    def __init__(self, location):
-        self._location = location
-
-    def test_connection(self):
-        print(f'Accessing Local music at {self._location}')
-
-
-def create_local_music_service(local_music_location, **_ignored):
-    return LocalService(local_music_location)
-
-
 factory = ObjectFactory()
 factory.register_builder('MMR', MMRServiceBuilder())
 factory.register_builder('ZC', ZCServiceBuilder())
-factory.register_builder('LOCAL', create_local_music_service)
 
-services = ServerTypeServiceProvider()
-services.register_builder('MMR', MMRServiceBuilder())
-services.register_builder('ZC', ZCServiceBuilder())
-services.register_builder('LOCAL', create_local_music_service)
+#services = ServerTypeServiceProvider()
+#services.register_builder('MMR', MMRServiceBuilder())
+#services.register_builder('ZC', ZCServiceBuilder())
