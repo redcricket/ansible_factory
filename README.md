@@ -19,7 +19,7 @@ Here's an example playbook:
       realtime_server:
         server_type: 'MMR'
         action: "{{ item }}"
-      with_items: 
+      loop: 
         - 'suspend'
         - 'update_executable'
         - 'unsuspend'
@@ -28,7 +28,7 @@ Here's an example playbook:
       realtime_server:
         server_type: 'ZC'
         action: "{{ item }}"
-      with_items: 
+      loop: 
         - 'suspend'
         - 'update_executable'
         - 'unsuspend'
