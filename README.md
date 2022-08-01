@@ -4,7 +4,7 @@ How to implement a General Purpose Object Factory in an Ansible module.
 # Purpose
 
 In this README file I will show how I implemented a General Purpose Object Factory for use in an Ansible module.
-I based the python code on this artical: https://realpython.com/factory-method-python/
+I based the python code on this article: https://realpython.com/factory-method-python/
 
 # Usage Playbook
 
